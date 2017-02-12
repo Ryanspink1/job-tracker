@@ -11,5 +11,10 @@
   <%= f.label :city %>
   <%= f.text_field :city %>
 
+  <%= f.label :category %>
+  <%= f.collection_select(:category_id, @categories, :id, :title)  %>
+
   <%= f.submit %>
 <% end %>
+<br>
+<%= link_to "Create a new category", new_category_path %>

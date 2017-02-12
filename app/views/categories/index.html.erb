@@ -1,0 +1,13 @@
+
+<h1>All Categories</h1>
+
+<div class="category_index_list">
+<% @categories.each do |category| %>
+  <ul class="category">
+    <%= link_to category.title, category_path(category) %>
+    <br>
+    <%= link_to "Edit", edit_category_path(category) %>
+    <%= link_to "Delete", category_path(category), method: :delete %>
+  </ul>
+<% end %>
+</div>
