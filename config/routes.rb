@@ -6,5 +6,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :companies do
+    resources :contacts#, only: [:new, :create]
+  end
+
   resources :categories
 end
